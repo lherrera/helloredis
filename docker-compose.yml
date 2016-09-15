@@ -4,13 +4,14 @@ services:
   javaclient:
     image: lherrera/hello-redis:1.0
     networks:
-       - java_app
-  redisdb:
-    image: redis
+       - multinet
+  redis:
+    image: redis:alpine
+    container_name: redisdb
     networks:
-       - java_app
+       - multinet
 
 networks:
-    java_app:
+    multinet:
 
 
