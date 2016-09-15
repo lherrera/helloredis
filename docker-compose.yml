@@ -1,0 +1,16 @@
+version: "2"
+services:
+
+  javaclient:
+    image: lherrera/hello-redis:1.0
+    networks:
+       - java_app
+  redisdb:
+    image: redis
+    networks:
+       - java_app
+
+networks:
+    java_app:
+
+

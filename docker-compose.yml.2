@@ -1,0 +1,17 @@
+version: "2"
+services:
+
+  javaclient:
+    image: lherrera/hello-redis:1.0
+    networks:
+       - multinet
+  redis:
+    image: redis
+    container_name: redisdb
+    networks:
+       - multinet
+
+networks:
+    multinet:
+
+
