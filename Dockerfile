@@ -1,4 +1,4 @@
-FROM java:7
+FROM openjdk:7-alpine 
 COPY /src /HelloRedis/src
 COPY /lib /HelloRedis/lib
 
